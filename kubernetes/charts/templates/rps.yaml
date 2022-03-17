@@ -48,6 +48,8 @@ spec:
           env:
             - name: "RPS_LOG_LEVEL"
               value: "{{ .Values.rps.logLevel }}"
+            - name: "RPS_MQTT_ADDRESS"
+              value: "mqtt://mosquitto:8883"
             - name: "RPS_VAULT_ADDRESS"
               value: "http://{{ .Release.Name }}-vault:8200"
             - name: "RPS_SECRETS_PATH"

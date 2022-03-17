@@ -46,5 +46,8 @@ kong:
       - containerPort: 4433
         servicePort: 4433
         parameters: []
+      - containerPort: 1883
+        servicePort: 1883
+        parameters: []
 mpsrouter:
   replicaCount: 1

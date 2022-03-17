@@ -51,6 +51,8 @@ spec:
                 secretKeyRef:
                   name: mps
                   key: connectionString
+            - name: "MPS_MQTT_ADDRESS"
+              value: "mqtt://mosquitto:8883"
             - name: "MPS_VAULT_ADDRESS"
               value: "http://{{ .Release.Name }}-vault:8200"
             - name: "MPS_SECRETS_PATH"

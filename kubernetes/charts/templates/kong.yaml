@@ -73,6 +73,19 @@ spec:
 apiVersion: configuration.konghq.com/v1beta1
 kind: TCPIngress
 metadata:
+  name: mqtt-ingress
+  annotations:
+    kubernetes.io/ingress.class: kong
+spec:
+  rules:
+    - port: 1883
+      backend:
+        serviceName: mosquitto
+        servicePort: 1883
+---
+apiVersion: configuration.konghq.com/v1beta1
+kind: TCPIngress
+metadata:
   name: cira-ingress
   annotations:
     kubernetes.io/ingress.class: kong
